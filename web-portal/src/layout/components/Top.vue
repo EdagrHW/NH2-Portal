@@ -41,14 +41,21 @@
     <!--顶部搜索栏-->
     <div class="search-bar">
       <el-row>
+        <div class="search-img">
+          网站LOGO
+        </div>
         <div class="search-head">
-          <el-input class="search-input">
+          <el-input class="search-input input-with-select">
+            <el-select v-model="service" style="width:100px;" slot="prepend" placeholder="服务">
+              <el-option label="网站开发" value="web"></el-option>
+              <el-option label="小程序开发" value="wechat"></el-option>
+            </el-select>
             <el-button style="background: #ee2a1a;border-radius:0px;color:#fff;" slot="append" icon="el-icon-search">搜索</el-button>
           </el-input>
         </div>
         <div class="shop-car">
           <el-badge :value="3" class="item">
-          <el-button  icon="el-icon-shopping-cart-1">购物车</el-button>
+          <el-button  icon="el-icon-shopping-cart-1" style="color: #ee2a1a;">购物车</el-button>
         </el-badge>
         </div>
 
@@ -61,6 +68,11 @@
 
 <script>
 export default {
+  data () {
+    return {
+      service: ''
+    }
+  }
 }
 </script>
 <style scoped>
@@ -122,17 +134,25 @@ export default {
 }
 .search-bar {
   position: relative;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  line-height: 80px;
   box-sizing: border-box;
+  // border: 1px solid green;
+  padding-bottom: 10px;
   .el-row{
     width: 100%;
-    height: 40px;
+    // border: 1px solid black;
+  }
+  .search-img{
+    float: left;
+    margin-left: 160px;
+    border: 1px solid red;
+    height: 80px;
+    width: 200px;
   }
   .search-head {
     float: left;
     width: 440px;
-    margin-left: 540px;
+    margin-left: 320px;
     position: relative;
     .search-input {
       width: 100%;
@@ -144,10 +164,9 @@ export default {
   .shop-car{
     float: left;
       position: relative;
-      margin-left: 1000px;
-      margin-top: -50px;
-      height: 40px;
+      margin-left: 780px;
+      margin-top: -55px;
       line-height: 50px;
-    }
+  }
 }
 </style>
