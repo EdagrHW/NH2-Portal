@@ -1,256 +1,168 @@
 <template>
   <div class="home-warp">
     <div class=home-ad>
-      我们的态度介绍
-      比如：不满意退款,无Bug交付,终生维护
+      IT服务人力外包
     </div>
-    <!--服务流程-->
-    <div class="service-process">
-      <div class="head">
-        服务流程
-      </div>
-      <div class="process">
-        <div>
-          1、收集建设资料沟通需求
-        </div>
-        <img src="../../static/images/right-turn_flat.png" alt="">
-        <div>
-          2、搭建小程序
-        </div>
-        <img src="../../static/images/right-turn_flat.png" alt="">
-        <div>
-          3、验收付款
-        </div>
-        <img src="../../static/images/right-turn_flat.png" alt="">
-         <div>
-          4、协助微信小程序认证
-        </div>
-        <img src="../../static/images/right-turn_flat.png" alt="">
-        <div>
-          5、小程序上线
-        </div>
-      </div>
-      <div class="foot">
-        <el-button style="background: #ee2a1a;color: #fff;">免费咨询产品报价</el-button>
-      </div>
-    </div>
-    <!--案例欣赏-->
-    <div class="case-info">
-      <div class="head">
-        案例欣赏
-      </div>
-      <div class="case">
-        <div class="card">
-          <div class="img">
-          </div>
-          <div class="btn">
-            <el-button style="background: #ee2a1a;color: #fff;">我想要类似的服务</el-button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img">
-          </div>
-          <div class="btn">
-            <el-button style="background: #ee2a1a;color: #fff;">我想要类似的服务</el-button>
-          </div>
-        </div>
-      </div>
-      <div class="case">
-        <div class="card">
-          <div class="img">
-          </div>
-          <div class="btn">
-            <el-button style="background: #ee2a1a;color: #fff;">我想要类似的服务</el-button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img">
-          </div>
-          <div class="btn">
-            <el-button style="background: #ee2a1a;color: #fff;">我想要类似的服务</el-button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--行业定制化-->
-    <div class="industry-customization">
-      <div class="head">
-        更多行业小程序个性化定制
-      </div>
-      <div class="industry">
-        <div class="card">
-          <div class="img">酒店</div>
-          <div class="btn">
-            <el-button style="background: #ee2a1a;color: #fff;">免费咨询产品报价</el-button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img">美容美发</div>
-          <div class="btn">
-            <el-button style="background: #ee2a1a;color: #fff;">免费咨询产品报价</el-button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img">餐饮</div>
-          <div class="btn">
-            <el-button style="background: #ee2a1a;color: #fff;">免费咨询产品报价</el-button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img">运动</div>
-          <div class="btn">
-            <el-button style="background: #ee2a1a;color: #fff;">免费咨询产品报价</el-button>
-          </div>
-        </div>
-      </div>
-
-      <div class="industry">
-        <div class="card">
-          <div class="img">培训</div>
-          <div class="btn">
-            <el-button style="background: #ee2a1a;color: #fff;">免费咨询产品报价</el-button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img">体育健身</div>
-          <div class="btn">
-            <el-button style="background: #ee2a1a;color: #fff;">免费咨询产品报价</el-button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img">生活服务</div>
-          <div class="btn">
-            <el-button style="background: #ee2a1a;color: #fff;">免费咨询产品报价</el-button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img">其他</div>
-          <div class="btn">
-            <el-button style="background: #ee2a1a;color: #fff;">免费咨询产品报价</el-button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <el-row type="flex"
+            style="margin-top: 35px;">
+      <!--内容左侧导航栏-->
+      <el-col style="width: 300px;">
+        <div class="menu-head">IT软件服务</div>
+        <el-menu default-active="2"
+                 class="el-menu-vertical-demo"
+                 style="border-bottom: 0.5px solid #ccc;border-left: 0.5px solid #ccc;"
+                 :unique-opened="true"
+                 @open="handleOpen"
+                 >
+          <el-submenu index="1">
+            <template slot="title">
+              <i class="el-icon-monitor"></i>
+              <span>网站开发</span>
+            </template>
+            <el-menu-item-group class="menu-item">
+              <div class="item-tip">
+                预算范围
+              </div>
+              <div class="item-input">
+                <el-input />
+                <i class="el-icon-minus"></i>
+                <el-input />
+              </div>
+              <div class="item-btn">
+                <el-button>重置</el-button>
+              </div>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="2">
+            <template slot="title">
+              <img src="../../static/images/minProgram.png"
+                   style="width:24px;height:24px;">
+              <span style="margin-left: 5px;">微信开发</span>
+            </template>
+            <el-menu-item-group class="menu-item">
+              <div class="item-tip">
+                预算范围
+              </div>
+              <div class="item-input">
+                <el-input />
+                <i class="el-icon-minus"></i>
+                <el-input />
+              </div>
+              <div class="item-btn">
+                <el-button>重置</el-button>
+              </div>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-submenu index="3">
+            <template slot="title">
+              <img src="../../static/images/app.png"
+                   style="width:24px;height:24px;">
+              <span style="margin-left: 5px;">APP开发</span>
+            </template>
+            <el-menu-item-group class="menu-item">
+              <div class="item-tip">
+                预算范围
+              </div>
+              <div class="item-input">
+                <el-input />
+                <i class="el-icon-minus"></i>
+                <el-input />
+              </div>
+              <div class="item-btn">
+                <el-button>重置</el-button>
+              </div>
+            </el-menu-item-group>
+          </el-submenu>
+        </el-menu>
+      </el-col>
+      <!--内容右侧展示栏-->
+      <el-col style="margin-left: 20px;">
+        <min-program v-show="type==='minprogram'"></min-program>
+        <app-program v-show="type==='appprogram'"></app-program>
+        <web-program v-show="type==='webprogram'"></web-program>
+      </el-col>
+    </el-row>
   </div>
+
 </template>
-
 <script>
+import MinProgram from './components/MinProgram'
+import AppProgram from './components/AppProgram'
+import WebProgram from './components/WebProgram'
 export default {
-
+  components: { MinProgram, AppProgram, WebProgram },
+  data () {
+    return {
+      type: 'minprogram'
+    }
+  },
+  methods: {
+    handleOpen (key, keyPath) {
+      switch (key) {
+        case '1':
+          this.type = 'webprogram'
+          break
+        case '2':
+          this.type = 'minprogram'
+          break
+        case '3':
+          this.type = 'appprogram'
+          break
+        default:
+          break
+      }
+    }
+    // },
+    // handleClose (key, keyPath) {
+    //   console.log(key, keyPath)
+    // }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-.home-ad{
+.home-warp {
+  width: 1190px;
+  margin: 0 auto;
+}
+.home-ad {
   width: 100%;
-  height: 460px;
+  height: 450px;
   text-align: center;
   background: #ccc;
 }
-.service-process{
-  position: relative;
-  height: 430px;
-  width: 100%;
+.menu-head {
+  color: #fff;
+  background: #ee2a1a;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
-  padding-bottom: 150px;
-  border: 1px solid goldenrod;
-  .head{
-    line-height: 240px;
-    font-size: 30px;
-    border: 1px solid green;
+  border: 1px solid #eee;
+}
+.menu-item {
+  border-left: 1px solid #ccc;
+  padding-left: 20px;
+  .item-tip {
+    color: #999;
+    padding-bottom: 10px;
   }
-  .process{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    img{
-      width: 50px;
-      height: 50px;
-    }
-    :nth-child(2n-1){
-      height: 250px;
-      width: 210px;
-      border: 1px solid red;
+  .item-input {
+    padding: 5px;
+    .el-input {
+      width: 75px;
     }
   }
-  .foot{
-    position: absolute;
-    width: 150px;
-    bottom: 30px;
-    left: 45%;
+  .item-btn {
+    margin: 5px 10px 0px 65px;
   }
 }
-.case-info{
-    position: relative;
-    height: 830px;
-    width: 100%;
-    background: #f6f6f6;
-    text-align: center;
-    padding-bottom: 250px;
-    border: 1px solid red;
-    .head{
-      line-height: 240px;
-      font-size: 30px;
-      border: 1px solid green;
-    }
-    .case{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .card{
-        height: 370px;
-        width: 600px;
-        border: 1px solid blue;
-        position: relative;
-        margin-left: 20px;
-        margin-top: 20px;
-        .btn{
-          position: absolute;
-          width: 150px;
-          bottom: 30px;
-          left: 30%;
-        }
-      }
-    }
-  }
-
-  .industry-customization{
-    position: relative;
-    height: 700px;
-    width: 100%;
-    background: #f6f6f6;
-    text-align: center;
-    padding-bottom: 250px;
-    border: 1px solid red;
-    .head{
-      line-height: 240px;
-      font-size: 30px;
-      border: 1px solid green;
-    }
-    .industry{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .card{
-        position: relative;
-        padding-bottom: 60px;
-        .img{
-          height: 240px;
-          width: 240px;
-          border-radius: 50%;
-          border: 1px solid blue;
-          margin-left: 20px;
-          margin-top: 20px;
-        }
-        .btn{
-            position: absolute;
-            width: 150px;
-            bottom: 0px;
-            left: 65px;
-        }
-      }
-
-    }
-  }
+</style>
+<style>
+.el-submenu__icon-arrow {
+  font-size: 20px;
+}
+.el-icon-arrow-down {
+  font-size: 20px;
+}
 </style>

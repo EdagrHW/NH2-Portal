@@ -16,6 +16,39 @@ export default new Router({
           component: () => import('@/views/home/index')
         }
       ]
+    },
+    {
+      path: '/minprogram',
+      redirect: '/minprogram/index',
+      component: Layout,
+      children: [
+        {
+          path: 'index',
+          component: () => import('@/views/minProgram/index')
+        }
+      ]
+    },
+    {
+      path: '/webprogram',
+      redirect: '/webprogram/index',
+      component: Layout,
+      children: [
+        {
+          path: 'index',
+          component: () => import('@/views/webProgram/index')
+        }
+      ]
+    },
+    {
+      path: '/test',
+      redirect: '/test/index',
+      component: Layout,
+      children: [
+        {
+          path: 'index',
+          component: () => import('@/views/test/index')
+        }
+      ]
     }
   ]
 })
