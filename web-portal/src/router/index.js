@@ -18,6 +18,14 @@ export default new Router({
       ]
     },
     {
+      path: '/login',
+      component: () => import('@/views/login/index')
+    },
+    {
+      path: '/register',
+      component: () => import('@/views/register/index')
+    },
+    {
       path: '/minprogram',
       redirect: '/minprogram/index',
       component: Layout,
@@ -41,14 +49,7 @@ export default new Router({
     },
     {
       path: '/test',
-      redirect: '/test/index',
-      component: Layout,
-      children: [
-        {
-          path: 'index',
-          component: () => import('@/views/test/index')
-        }
-      ]
+      component: () => import('@/views/test/index')
     }
   ]
 })

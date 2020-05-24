@@ -8,10 +8,10 @@
             <i class="el-icon-s-home" /><span @click="goHome">叮当猫首页</span>
           </el-col>
           <el-col class="login-info">
-            <span>请登录</span>
+            <router-link to="/login" tag="span">请登录</router-link>
           </el-col>
           <el-col class="register-info">
-            <span>免费注册</span>
+            <router-link to="/register" tag="span">免费注册</router-link>
           </el-col>
           <el-col class="user-center">
             <el-dropdown>
