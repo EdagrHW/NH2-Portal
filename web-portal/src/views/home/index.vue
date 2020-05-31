@@ -1,7 +1,7 @@
 <template>
   <div class="home-warp">
-    <div class=home-ad>
-      IT服务人力外包
+    <div class="home-ad">
+      <img src="../../static/images/home-ad.png">
     </div>
     <el-row type="flex"
             style="margin-top: 35px;">
@@ -127,9 +127,12 @@ export default {
 }
 .home-ad {
   width: 100%;
-  height: 450px;
+  height: 350px;
   text-align: center;
-  background: #ccc;
+  img{
+    width: 1190px;
+    height: 350px;
+  }
 }
 .menu-head {
   color: #fff;

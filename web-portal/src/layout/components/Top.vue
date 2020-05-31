@@ -41,7 +41,7 @@
     <!--顶部搜索栏-->
     <div class="search-bar">
         <div class="search-img">
-          网站LOGO
+          <img src="../../static/images/timg.png" width="100%" height="100%" />
         </div>
         <div class="search-head">
           <el-input class="search-input input-with-select">
@@ -141,9 +141,8 @@ export default {
   padding-bottom: 10px;
   margin: 0 auto;
   .search-img{
-    border: 1px solid red;
-    height: 80px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
   }
   .search-head {
     display: flex;

@@ -6,50 +6,78 @@
     <div class="examples">
       <div class="example">
         <div class="img">
-          图片
+          <img src="../../../static/images/app-program-1.png"
+               alt="">
         </div>
         <div class="desc">
-          描述
+          在线问诊APP
         </div>
         <div class="bottom">
-          <div class="price">5000起</div>
-          <div class="car">购物车</div>
+          <div class="price">
+            <span>￥</span>
+            <span>可议价</span>
+            <!-- <span>起</span> -->
+          </div>
+          <div class="car">
+            <i class="el-icon-shopping-cart-1"></i>
+          </div>
         </div>
       </div>
       <div class="example">
         <div class="img">
-          图片
+          <img src="../../../static/images/app-program-2.png"
+               alt="">
         </div>
         <div class="desc">
-          描述
+          知识付费直播系统
         </div>
         <div class="bottom">
-          <div class="price">5000起</div>
-          <div class="car">购物车</div>
+          <div class="price">
+            <span>￥</span>
+            <span>可议价</span>
+            <!-- <span>起</span> -->
+          </div>
+          <div class="car">
+            <i class="el-icon-shopping-cart-1"></i>
+          </div>
         </div>
       </div>
       <div class="example">
         <div class="img">
-          图片
+          <img src="../../../static/images/app-program-3.png"
+               alt="">
         </div>
         <div class="desc">
-          描述
+          学习考试系统
         </div>
         <div class="bottom">
-          <div class="price">5000起</div>
-          <div class="car">购物车</div>
+          <div class="price">
+            <span>￥</span>
+            <span>可议价</span>
+            <!-- <span>起</span> -->
+          </div>
+          <div class="car">
+            <i class="el-icon-shopping-cart-1"></i>
+          </div>
         </div>
       </div>
       <div class="example">
         <div class="img">
-          图片
+          <img src="../../../static/images/app-program-4.png"
+               alt="">
         </div>
         <div class="desc">
-          描述
+          食品安全溯源系统
         </div>
         <div class="bottom">
-          <div class="price">5000起</div>
-          <div class="car">购物车</div>
+          <div class="price">
+            <span>￥</span>
+            <span>可议价</span>
+            <!-- <span>起</span> -->
+          </div>
+          <div class="car">
+            <i class="el-icon-shopping-cart-1"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -102,10 +130,10 @@ export default {
   .example {
     width: 225px;
     height: 300px;
-    .img{
+    img {
       width: 230px;
       height: 230px;
-      border: 1px solid red;
+      //border: 1px solid red;
     }
     .desc {
       font-size: 16px;
@@ -114,7 +142,7 @@ export default {
       line-height: 40px;
       max-width: 100%;
       overflow: hidden;
-      padding-left: 10px; ;
+      padding-left: 10px;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
@@ -122,15 +150,31 @@ export default {
       height: 50px;
       width: 100%;
       position: relative;
-      .price{
+      .price {
+        color: #ea1920;
+        line-height: 14px;
+        margin-top: 10px;
+        font-size: 14px;
         position: absolute;
         left: 10px;
+        :nth-child(2) {
+          font-size: 16px;
+        }
+        :nth-child(3) {
+          font-size: 12px;
+          color: #999999;
+        }
       }
-      .car{
+      .car {
         position: absolute;
         right: 10px;
+        margin-top: 10px;
+        .el-icon-shopping-cart-1{
+          font-size: 20px;
+          font-weight: 700;
+          color: #ea1920;
+        }
       }
-
     }
   }
   .example:hover {
